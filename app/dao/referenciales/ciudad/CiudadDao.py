@@ -2,7 +2,6 @@
 from flask import current_app as app
 from app.conexion.Conexion import Conexion
 
-
 class CiudadDao:
 
     def getCiudades(self):
@@ -19,6 +18,7 @@ class CiudadDao:
             cur.execute(ciudadSQL)
             # trae datos de la bd
             lista_ciudades = cur.fetchall()
+            print(lista_ciudades)
             # retorno los datos
             lista_ordenada = []
             for item in lista_ciudades:
